@@ -4,9 +4,20 @@
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <meta name="mobile-web-app-capable" content="yes">
+
 	<link rel="icon" href="img/favicon.png" type="image/png">
 	<title>John Alex</title>
+
+  <meta name="description" content="Working as a Aircraft Mechanic in Component Overhaul Division Structure">
+  <meta name="keywords" content="Aircraft, Aviation, Aeronautical">
+
+  <meta property="og:title" content="John Alex">
+  <meta property="og:description" content="Working as a Aircraft Mechanic in Component Overhaul Division Structure - CapBargain">
+  <meta property="og:image" content="https://johnalex-stack.github.io/john-alex/img/personal.jpg">
+  <meta property="og:site_name" content="https://johnalex-stack.github.io/john-alex/">
+
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
@@ -17,6 +28,7 @@
 	<link rel="stylesheet" href="vendors/animate-css/animate.css">
 	<link rel="stylesheet" href="vendors/popup/magnific-popup.css">
 	<link rel="stylesheet" href="vendors/flaticon/flaticon.css">
+	
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
@@ -36,9 +48,11 @@
 						<div class="media-body">
 							<div class="personal_text">
 								<h6>Hello Everybody, i am</h6>
-								<h3>JOHN ALEX</h3>
-								<h4>Assistant Aircraft Mechanic</h4>
-								<p>Working as a Assistant Aircraft Mechanic at Air India Engineering
+								<div class="person-title">
+									<h3 class="typeing" data-typeingText="JOHN ALEX"></h3>
+								</div>
+								<h4>Aircraft Mechanic in Component Overhaul Division Structure</h4>
+								<p>Working as a Aircraft Mechanic in Component Overhaul Division Structure (COD) at Air India Engineering
 									Services Limited Trivandrum (July 2016 – presently)</p>
 								<ul class="list basic_info">
 									<li><a href="#"><i class="lnr lnr-calendar-full"></i> 9 March, 1989</a></li>
@@ -358,11 +372,6 @@ other honeycomb assemblies.</p>
 	</footer>
 	<!--================End Footer Area =================-->
 
-
-
-
-
-
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="js/jquery-3.3.1.min.js"></script>
@@ -380,6 +389,28 @@ other honeycomb assemblies.</p>
 	<script src="vendors/counter-up/jquery.counterup.min.js"></script>
 	<script src="js/mail-script.js"></script>
 	<script src="js/theme.js"></script>
+	<script>
+		let textType = document.querySelector('.typeing')
+		let textArray = textType.dataset.typeingtext.split("")
+		let typeCount = 0;
+
+		let autoTypeText = () => {
+				if(typeCount < textType.dataset.typeingtext.length){
+						textType.innerHTML += textType.dataset.typeingtext.charAt(typeCount)
+						typeCount++
+						textArray = textType.dataset.typeingtext.split("")
+				}else {
+						textArray.pop()
+						textType.innerHTML = textArray.join("")
+						if(textArray.length == 0){
+								typeCount = 0
+						}
+				}  
+		}
+		setInterval(() => {
+				autoTypeText()
+		},250)
+	</script>
 </body>
 
 </html>

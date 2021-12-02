@@ -2563,8 +2563,7 @@ background-color: black;}
 .personal_text h3 {
   font-size: 48px;
   text-transform: uppercase;
-  margin-bottom: 15px;
-  color: #222222; }
+  margin-bottom: 15px; }
 .personal_text p {
   font-family: "Roboto", sans-serif;
   max-width: 540px;
@@ -2769,5 +2768,30 @@ background-color: black;}
 /* End Footer Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
-
-/*# sourceMappingURL=style.css.map */
+.person-title {
+  margin-bottom: 20px;
+}
+h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  display: inline;
+  background: linear-gradient(
+    45deg,
+    rgb(0, 143, 104),
+    rgb(172, 51, 233),
+    rgb(250, 224, 66)
+  );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  text-transform: capitalize;
+  border-right-style: solid;
+  border-width: 10px;
+  border-image: linear-gradient(
+      45deg,
+      rgb(0, 143, 104),
+      rgb(172, 51, 233),
+      rgb(250, 224, 66)
+    )
+    1;
+}
